@@ -2,19 +2,19 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import User from './screens/User';
+import Galeria from './screens/Galeria';
+import { Ionicons } from '@expo/vector-icons';
 
-function DetalhesScreen({ navigation }) {
+function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Detalhes do Projeto</Text>
-      <Text style={styles.subtitle}>React Native: Personalizando sua primeira tela!</Text>
+      <Text style={styles.title}>Bem-vindo à Home!</Text>
       <Button
-        title="Ir para Usuário"
-        onPress={() => navigation.navigate('User')}
+        title="Abrir Galeria"
+        onPress={() => navigation.navigate('Galeria')}
         color="#e94560"
       />
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -26,14 +26,20 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="Detalhes"
-          component={DetalhesScreen}
-          options={{ title: 'Tela de Detalhes' }}
+          name="Home"
+          component={HomeScreen}
+          options={{ title: 'Tela Inicial' }}
         />
         <Stack.Screen
-          name="User"
-          component={User}
-          options={{ title: 'Perfil do Usuário' }}
+          name="Galeria"
+          component={Galeria}
+          options={{
+            title: 'Galeria de Imagens',
+            headerRight: () => (
+              // Ícone de câmera no topo da tela
+              <Ionicons name="camera" size={28} color="#e94560" style={{ marginRight: 16 }} />
+            ),
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
@@ -53,15 +59,6 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: 'bold',
     color: '#e94560',
-    marginBottom: 12,
-    textShadowColor: '#fff',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 2,
-  },
-  subtitle: {
-    fontSize: 20,
-    color: '#0f3460',
-    marginBottom: 8,
-    fontStyle: 'italic',
+    marginBottom: 24,
   },
 });
