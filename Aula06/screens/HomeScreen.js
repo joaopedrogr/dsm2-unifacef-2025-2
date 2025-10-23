@@ -12,6 +12,10 @@ export default function HomeScreen({ navigation }) {
         title="Validação de Formulário"
         onPress={() => navigation.navigate('Validação de Formulário')}
       />
+      <Button
+        title="Cadastro Completo"
+        onPress={() => navigation.navigate('Cadastro Completo')}
+      />
     </View>
   );
 }
