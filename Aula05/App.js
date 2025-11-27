@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -18,6 +19,13 @@ function HomeScreen({ navigation }) {
     </View>
   );
 }
+=======
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './screens/HomeScreen';
+import ProfileScreen from './screens/ProfileScreen'
+import GalleryScreen from './screens/GalleryScreen'
+>>>>>>> 7dbc97a1a36a02eb0dfbe56b5fc6740fb446c282
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +33,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+<<<<<<< HEAD
         <Stack.Screen
           name="Home"
           component={HomeScreen}
@@ -62,3 +71,12 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
 });
+=======
+        <Stack.Screen name="Início" component={HomeScreen} />
+        <Stack.Screen name="Perfil" component={ProfileScreen} />
+        <Stack.Screen name="Galeria" component={GalleryScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+>>>>>>> 7dbc97a1a36a02eb0dfbe56b5fc6740fb446c282

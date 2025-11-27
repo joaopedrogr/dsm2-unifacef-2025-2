@@ -16,6 +16,13 @@ export default function HomeScreen({ navigation }) {
         title="Perfil"
         onPress={() => navigation.navigate('Perfil')}
       />
+<<<<<<< HEAD
+=======
+      <Button
+        title="Galeria"
+        onPress={() => navigation.navigate('Galeria')}
+      />
+>>>>>>> 7dbc97a1a36a02eb0dfbe56b5fc6740fb446c282
     </View>
   );
 }

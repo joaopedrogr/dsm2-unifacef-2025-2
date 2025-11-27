@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+<<<<<<< HEAD
 import User from './screens/User';
 
 function DetalhesScreen({ navigation }) {
@@ -18,6 +19,11 @@ function DetalhesScreen({ navigation }) {
     </View>
   );
 }
+=======
+import HomeScreen from './screens/HomeScreen';
+import DetailsScreen from './screens/DetailsScreen';
+import ProfileScreen from './screens/ProfileScreen'
+>>>>>>> 7dbc97a1a36a02eb0dfbe56b5fc6740fb446c282
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +31,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+<<<<<<< HEAD
         <Stack.Screen
           name="Detalhes"
           component={DetalhesScreen}
@@ -35,6 +42,11 @@ export default function App() {
           component={User}
           options={{ title: 'Perfil do Usuário' }}
         />
+=======
+        <Stack.Screen name="Início" component={HomeScreen} />
+        <Stack.Screen name="Detalhes" component={DetailsScreen} />
+        <Stack.Screen name="Perfil" component={ProfileScreen} />
+>>>>>>> 7dbc97a1a36a02eb0dfbe56b5fc6740fb446c282
       </Stack.Navigator>
     </NavigationContainer>
   );
